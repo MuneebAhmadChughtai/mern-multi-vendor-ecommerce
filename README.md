@@ -1,1 +1,1 @@
-# mern-multi-vendor-ecommerce-
+# mern-multi-vendor-ecommerce
