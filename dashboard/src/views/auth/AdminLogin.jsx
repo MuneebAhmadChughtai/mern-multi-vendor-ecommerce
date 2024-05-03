@@ -1,25 +1,25 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-
-import { FaGoogle, FaFacebook } from 'react-icons/fa';
+import { admin_login } from '../../store/Reducers/authReducer';
+import { useDispatch } from 'react-redux';
 
 const AdminLogin = () => {
+
+  const dispatch = useDispatch();
+
   const [state, setState] = useState({
     email: '',
     password: '',
   });
-
 
   const handleInput = (e) => (setState({
     ...state,
     [e.target.name]: e.target.value,
   }));
 
-
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(state);
-  }
+    dispatch(admin_login(state));
+  };
 
   return (
     <div className='min-w-screen min-h-screen bg-[#cdcae9] flex justify-center items-center' >

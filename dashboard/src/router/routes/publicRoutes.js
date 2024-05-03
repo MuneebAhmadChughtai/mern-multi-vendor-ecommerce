@@ -13,7 +13,7 @@ const publicRoutes = [
         element: <Register />
     },
     {
-        path:'/admin-login',
+        path:'/admin/login',
         element: <AdminLogin />
     }
 ]
